@@ -37,4 +37,4 @@ do
     }
     // Check if the user wants to keep going and exit if not
     Console.WriteLine("Would you like to do another operation? (y/n)");
-} while(Console.ReadLine() != "n");
+} while(Console.ReadLine().ToLower() != "n");
