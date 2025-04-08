@@ -1,7 +1,7 @@
 ﻿int num1 = 7;
 int num2 = 3;
 
-while(true)
+do
 {
     Console.WriteLine("Please choose an operation to perform:");
     Console.WriteLine("1: Addition");
@@ -26,8 +26,4 @@ while(true)
             break;
     }
     Console.WriteLine("Would you like to do another operation? (y/n)");
-    if(Console.ReadLine() == "n")
-    {
-        break;
-    }
-}
+} while(Console.ReadLine() != "n");
