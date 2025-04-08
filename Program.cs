@@ -20,16 +20,16 @@ do
     switch (Console.ReadLine())
     {
         case "+":
-            Console.WriteLine($"{num1} + {num2} = {num1 + num2}");
+            DoAddition(num1, num2);
             break;
         case "-":
-            Console.WriteLine($"{num1} - {num2} = {num1 - num2}");
+            DoSubtraction(num1, num2);
             break;
         case "*":
-            Console.WriteLine($"{num1} * {num2} = {num1 * num2}");
+            DoMultiplication(num1, num2);
             break;
         case "/":
-            Console.WriteLine($"{num1} / {num2} = {num1/num2}");
+            DoDivision(num1, num2);
             break;
         default:
             Console.WriteLine("That is not a valid input!");
@@ -37,4 +37,24 @@ do
     }
     // Check if the user wants to keep going and exit if not
     Console.WriteLine("Would you like to do another operation? (y/n)");
-} while(Console.ReadLine().ToLower() != "n");
+} while (Console.ReadLine().ToLower() != "n");
+
+void DoAddition(double a, double b)
+{
+    Console.WriteLine($"{a} + {b} = {a + b}");
+}
+
+void DoSubtraction(double a, double b)
+{
+    Console.WriteLine($"{a} - {b} = {a - b}");
+}
+
+void DoMultiplication(double a, double b)
+{
+    Console.WriteLine($"{a} * {b} = {a * b}");
+}
+
+void DoDivision(double a, double b)
+{
+    Console.WriteLine($"{a} / {b} = {a / b}");
+}
