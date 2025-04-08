@@ -1,32 +1,38 @@
 ﻿//  Initialize two numbers
-int num1 = 7;
-int num2 = 3;
+double num1;
+double num2;
+Console.Write("Please enter a first number: ");
+num1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Please enter a second number: ");
+num2 = Convert.ToDouble(Console.ReadLine());
 
 // Make sure the loop runs once
 do
 {
     // Print the menu
     Console.WriteLine("Please choose an operation to perform:");
-    Console.WriteLine("1: Addition");
-    Console.WriteLine("2: Subtraction");
-    Console.WriteLine("3: Multiplication");
-    Console.WriteLine("4: Division");
+    Console.WriteLine("+: Addition");
+    Console.WriteLine("-: Subtraction");
+    Console.WriteLine("*: Multiplication");
+    Console.WriteLine("/: Division");
 
     // Take user input and execute the requested operation
-    int selection = Convert.ToInt32(Console.ReadLine());
-    switch (selection)
+    switch (Console.ReadLine())
     {
-        case 1:
+        case "+":
             Console.WriteLine($"{num1} + {num2} = {num1 + num2}");
             break;
-        case 2:
+        case "-":
             Console.WriteLine($"{num1} - {num2} = {num1 - num2}");
             break;
-        case 3:
+        case "*":
             Console.WriteLine($"{num1} * {num2} = {num1 * num2}");
             break;
-        case 4:
-            Console.WriteLine($"{num1} / {num2} = {num1 / num2}r{num1 % num2}");
+        case "/":
+            Console.WriteLine($"{num1} / {num2} = {num1/num2}");
+            break;
+        default:
+            Console.WriteLine("That is not a valid input!");
             break;
     }
     // Check if the user wants to keep going and exit if not
